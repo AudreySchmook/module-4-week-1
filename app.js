@@ -5,10 +5,14 @@ app.get('/', function(req,res){
     res.send('Hello world');
 });
 
-//basic request
+//basic route
 app.get('/monkeys', function(req,res){
     res.send('We really like monkeys');
 });
+
+app.post('/monkeys', function(req,res){
+    res.send("you cannot post stuff yet");
+})
 
 //wildcard request
 app.get('/monkeys/*', function(req,res){
